@@ -12,10 +12,12 @@
 
 ---
 
-While most comparisons can be fairly simple to set up, it can also become tedious quickly. That's why MikroCompare provides a small package of common comparison utilities. Also, it's:
+While most comparisons can be fairly simple to set up, it can also quickly become tedious. That's why MikroCompare provides a small package of common comparison utilities for you, ready to use!
+
+Also, it's:
 
 - Tiny (~800 bytes gzipped)
-- Zero dependencies
+- Has zero dependencies
 - Has 100% test coverage
 
 ## Usage

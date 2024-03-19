@@ -1,7 +1,7 @@
 {
   "name": "mikrocompare",
   "description": "MikroCompare simplifies your comparisons in JavaScript",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "author": "Mikael Vesavuori",
   "license": "MIT",
   "main": "./lib/index.js",
