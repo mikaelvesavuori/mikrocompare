@@ -4,6 +4,12 @@
 
 ![Build Status](https://github.com/mikaelvesavuori/mikrocompare/workflows/main/badge.svg)
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mikaelvesavuori_mikrocompare&metric=alert_status)](https://sonarcloud.io/dashboard?id=mikaelvesavuori_mikrocompare)
+
+[![codecov](https://codecov.io/gh/mikaelvesavuori/mikrocompare/graph/badge.svg?token=T4JDE4K38T)](https://codecov.io/gh/mikaelvesavuori/mikrocompare)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/491257dbca6249fbfde1/maintainability)](https://codeclimate.com/github/mikaelvesavuori/mikrocompare/maintainability)
+
 ---
 
 While most comparisons can be fairly simple to set up, it can also become tedious quickly. That's why MikroCompare provides a small package of common comparison utilities. Also, it's:

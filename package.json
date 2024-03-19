@@ -9,7 +9,10 @@
     "type": "git",
     "url": "git+https://github.com/mikaelvesavuori/mikrocompare.git"
   },
-  "keywords": [],
+  "keywords": [
+    "compare",
+    "comparison"
+  ],
   "bugs": {
     "url": "https://github.com/mikaelvesavuori/mikrocompare/issues"
   },
