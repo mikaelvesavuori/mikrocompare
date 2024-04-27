@@ -1,1 +1,1 @@
-export * from './domain/MikroCompare';
+export * from './domain/MikroCompare.js';

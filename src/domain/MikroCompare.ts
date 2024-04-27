@@ -1,5 +1,6 @@
 /**
- * @description TODO
+ * @description MikroCompare simplifies your comparisons in JavaScript.
+ *
  * @example
  * import { MikroCompare } from 'mikrocompare';
  *

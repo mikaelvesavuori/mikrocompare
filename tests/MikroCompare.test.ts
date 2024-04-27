@@ -1,79 +1,79 @@
-import test from 'ava';
+import { test, expect } from 'vitest';
 
-import { MikroCompare } from '../src';
+import { MikroCompare } from '../src/domain/MikroCompare.js';
 
 const compare = new MikroCompare();
 
 /**
  * POSITIVE TESTS
  */
-test('It should do an "is" comparison', (t) => {
+test('It should do an "is" comparison', () => {
   const expected = true;
 
   const result = compare.is('abc', 'abc');
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a positive "exists" comparison', (t) => {
+test('It should do a positive "exists" comparison', () => {
   const expected = true;
 
   const result = compare.exists('abc', true);
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a undefined "exists" comparison', (t) => {
+test('It should do a undefined "exists" comparison', () => {
   const expected = true;
 
   // @ts-ignore
   const result = compare.exists(false, false);
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a negative "exists" comparison', (t) => {
+test('It should do a negative "exists" comparison', () => {
   const expected = true;
 
   // @ts-ignore
   const result = compare.exists(undefined, false);
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a "moreThan" comparison', (t) => {
+test('It should do a "moreThan" comparison', () => {
   const expected = true;
 
   const result = compare.moreThan(4, 2);
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a "moreThanOrEqual" comparison', (t) => {
+test('It should do a "moreThanOrEqual" comparison', () => {
   const expected = true;
 
   const result = compare.moreThanOrEqual(4, 4);
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a "lessThan" comparison', (t) => {
+test('It should do a "lessThan" comparison', () => {
   const expected = true;
 
   const result = compare.lessThan(4, 8);
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a "lessThanOrEqual" comparison', (t) => {
+test('It should do a "lessThanOrEqual" comparison', () => {
   const expected = true;
 
   const result = compare.lessThanOrEqual(4, 4);
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a case-sensitive "contains" comparison', (t) => {
+test('It should do a case-sensitive "contains" comparison', () => {
   const expected = false;
 
   const result = compare.contains(
@@ -82,10 +82,10 @@ test('It should do a case-sensitive "contains" comparison', (t) => {
     true
   );
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a non-case-sensitive "contains" comparison', (t) => {
+test('It should do a non-case-sensitive "contains" comparison', () => {
   const expected = true;
 
   const result = compare.contains(
@@ -93,53 +93,53 @@ test('It should do a non-case-sensitive "contains" comparison', (t) => {
     'dark'
   );
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a case-sensitive "includes" comparison', (t) => {
+test('It should do a case-sensitive "includes" comparison', () => {
   const expected = false;
 
   const result = compare.includes('a DarK day was ahead', 'dark', true);
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a non-case-sensitive "includes" comparison', (t) => {
+test('It should do a non-case-sensitive "includes" comparison', () => {
   const expected = true;
 
   const result = compare.includes('a DarK day was ahead', 'dark');
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a case-sensitive "startsWith" comparison', (t) => {
+test('It should do a case-sensitive "startsWith" comparison', () => {
   const expected = false;
 
   const result = compare.startsWith('Philips light bulb', 'philips', true);
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a non-case-sensitive "startsWith" comparison', (t) => {
+test('It should do a non-case-sensitive "startsWith" comparison', () => {
   const expected = true;
 
   const result = compare.startsWith('Philips light bulb', 'philips');
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a case-sensitive "endsWith" comparison', (t) => {
+test('It should do a case-sensitive "endsWith" comparison', () => {
   const expected = false;
 
   const result = compare.endsWith('BigMac', 'mac', true);
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
 
-test('It should do a non-case-sensitive "endsWith" comparison', (t) => {
+test('It should do a non-case-sensitive "endsWith" comparison', () => {
   const expected = true;
 
   const result = compare.endsWith('BigMac', 'mac');
 
-  t.is(result, expected);
+  expect(result).toBe(expected);
 });
